@@ -84,7 +84,7 @@ O vídeo explicativo sobre a metologia, resultados e código-fonte utilizado foi
 
 <p align="center">
 <picture>
-  <img src="https://github.com/marceloklotz/fiap-quarta-fase/blob/main/assets/tela-youtube.png" width="100%" alt="Integrantes do Grupo">
+  <img src="#" width="100%" alt="Integrantes do Grupo">
 </picture>
 </p>
 <p align="center"> Acesso ao vídeo: -------------  </p>

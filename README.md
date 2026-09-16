@@ -18,6 +18,19 @@ Uma solução *end-to-end* projetada para apoiar consultas de ginecologia ou obs
 > * **Não estão aptos para embasar decisões clínicas em tempo real, realizar diagnósticos ou apoiar triagens hospitalares.**
 > * Toda e qualquer interpretação ou uso derivado deste código deve ficar estritamente sob a supervisão de profissionais de saúde competentes.
 
+## 👥 Integrantes do grupo
+Os membros do grupo são compostos pelos seguintes servidores da **Secretaria de Segurança Pública do Distrito Federal (SSP/DF)**:
+
+- Alexandre Natã Vicente (**rm370024**) (ale.n.vicente@gmail.com)
+- Antônio Cláudio Almeida (**rm370052**) (antonioalmeida@gmail.com)
+- Cyd Ferreira Rodrigues (**rm370004**) (cydnelson@gmail.com)
+- David Catherink (**rm369997**) (d.catherinck@gmail.com)
+- Marcelo Macedo Klotz (**rm370010**) (marceloklotz@gmail.com) 
+
+<picture>
+  <img src="https://img.shields.io/badge/-ebebeb?style=for-the-badge&logoColor=black" width="100%" height="10px" alt="Integrantes do Grupo">
+</picture>
+
 # 🛠️ Detalhamento e Aplicação Prática das Tecnologias
 
 Para garantir o funcionamento integrado e robusto do ecossistema multimodal, cada tecnologia e biblioteca desempenha um papel estratégico bem definido no código:
@@ -47,3 +60,31 @@ Para garantir o funcionamento integrado e robusto do ecossistema multimodal, cad
 **Áudio — Audio Recording Whisper:** [Disponível via Kaggle](https://www.kaggle.com/datasets/najamahmed97/audio-recording-whisper). 
 
 Conjunto de dados composto por diálogos médicos e simulações de consultas clínicas padronizadas pelo formato SOAP.
+
+# 📁 Fluxo (pipeline)
+
+```text
+
+│   ├── Entrada dos dados → análise por Machine Learning → consulta de informações → interpretação utilizando LLM → apresentação dos resultados para um profissional.
+
+```
+
+## 📒 Relatório técnico
+
+O Relatório Técnico, disponível pelo link abaixo, detalha todo o passo-a-passo para a construção dos módulos:
+
+
+<p align="center">
+  <picture><img src="https://github.com/marceloklotz/fiap-quarta-fase/blob/main/assets/relatorio.png" alt="Realatório"></picture>
+</p>
+
+## 📽️ Vídeo explicativo
+
+O vídeo explicativo sobre a metologia, resultados e código-fonte utilizado foi disponbilizado a partir do link abaixo:
+
+<p align="center">
+<picture>
+  <img src="https://github.com/marceloklotz/fiap-quarta-fase/blob/main/assets/tela-youtube.png" width="100%" alt="Integrantes do Grupo">
+</picture>
+</p>
+<p align="center"> Acesso ao vídeo: -------------  </p>

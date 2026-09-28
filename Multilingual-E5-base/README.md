@@ -1,13 +1,13 @@
-# Etapa 3.1 — RAG incremental local/offline
+# RAG incremental local/offline
 
-Esta versão preserva a lógica da Etapa 3 original e substitui somente o backend de embeddings Gemini por `intfloat/multilingual-e5-base`, executado localmente com SentenceTransformers.
+Este script utiliza o modelo Multilingual-E5-base (disponível no Hugging Face) em substituição a outros modelos de embeddings que foram utilizados no projeto (Gemini/OpenAI). O script é executado localmente com SentenceTransformers.
 
-## O que permanece
+## Aprimoramentos realizados
 
 - FAISS
 - SHA-256 dos PCDTs
 - fingerprint individual dos chunks
-- detecção de PCDTs novos, alterados e removidos
+- detecção de arquivos de protocolos médicos (PCDTs) novos, alterados e removidos na base
 - remoção dos chunks antigos de PCDTs alterados/removidos
 - checkpoint por lote
 - salvamento do FAISS após cada lote
@@ -18,7 +18,7 @@ Esta versão preserva a lógica da Etapa 3 original e substitui somente o backen
 - retriever `k=4`
 - sincronização opcional para uma pasta local do Google Drive para computador
 
-## O que muda
+## Outras alterações realizadas
 
 `GoogleGenerativeAIEmbeddings` deixa de ser utilizado.
 
@@ -28,21 +28,11 @@ O embedding passa a ser gerado localmente pelo:
 
 O modelo suporta 94 idiomas e produz embeddings de 768 dimensões. O adaptador aplica `passage:` aos documentos e `query:` às consultas, mantendo o espaço semântico consistente.
 
-## Importante sobre "100% offline"
+## Nota
 
-Na primeira instalação, o modelo precisa ser baixado uma vez do Hugging Face, salvo localmente. Depois disso, o processamento da Etapa 3.1 não usa Gemini, Google API ou internet.
+Na primeira instalação, o modelo precisa ser baixado uma vez do Hugging Face, salvo localmente. Depois disso, o processamento dos arquivos deixa de utilizar o Gemini, Google API ou internet.
 
-Para uma execução estritamente sem internet desde o primeiro processamento, baixe previamente o modelo para uma pasta local e configure `CAMINHO_MODELO_LOCAL` no `.env`.
-
-## FAISS antigo
-
-Não misture o FAISS criado com `gemini-embedding-001` com o novo FAISS E5.
-
-Por padrão, esta versão usa:
-
-`C:\RAG_PCDT\PCDT_FAISS_E5`
-
-Ela também grava `embedding_config.json` e valida o modelo/dimensão antes de carregar um índice existente.
+Por padrão, esta versão usa o caminho (`C:\RAG_PCDT\PCDT_FAISS_E5`) e grava `embedding_config.json`, validando o modelo/dimensão antes de carregar um índice existente.
 
 ## Google Drive
 
@@ -70,3 +60,7 @@ O Google Drive faz a sincronização para a nuvem.
 ```
 
 Na primeira execução o modelo será baixado, salvo no cache do SentenceTransformers e utilizado localmente.
+
+## Link para download no HuggingFace
+
+https://huggingface.co/intfloat/multilingual-e5-base

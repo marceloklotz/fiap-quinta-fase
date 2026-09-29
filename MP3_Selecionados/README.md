@@ -3,88 +3,36 @@
 [![FIAP Postech em IA para Devs](https://img.shields.io/badge/FIAP-Postech%20IA%20para%20Devs-blue?style=for-the-badge)](https://www.fiap.com.br/)
 [![Fase 5 - Tech Challenge](https://img.shields.io/badge/Fase_5-Tech_Challenge-purple?style=for-the-badge)](https://github.com/marceloklotz/fiap-quinta-fase/)
 
-Este repositório contém o código-fonte e as especificações técnicas desenvolvidos no âmbito do desafio (Tech Challenge) apresentado durante a Quinta Fase da Pós Tech (8IADT), da Faculdade de Informática e Administração Paulista (FIAP), conforme requisitos contidos no PDF disponível no presente repositório. O desafio propõe a criação do **Guardiã AI - Inteligência Artificial para Saúde e Segurança da Mulher**, uma aplicação capaz de receber informações de um atendimento e utilizar Inteligência Artificial para auxiliar na análise inicial do caso, auxiliando às equipes profissionais atuantes em questões voltadas à saúde da mulher e à segurança da mulher. 
+Esta pasta contém arquivos MP3 selecionados que podem ser utilizados para testar o uso do "GUARDIÃ AI - Inteligência Artificial para Saúde e Segurança da Mulher". Os arquivos foram extraídos a partir do [Kaggle](https://www.kaggle.com/datasets/najamahmed97/audio-recording-whisper/data.), onde podem ser encontradas as transcrições completas. O repositório encontra-se na língua inglesa. Abaixo trechos das transcrições traduzidas (contexto). Os arquivos foram selecionadas por estarem relacionados à questionamentos sobre possível ocorrência de violência doméstica durante o atendimento clínico médico.
 
-## 🎙️ Solução de Análise de Áudio para Atendimento Clínico
-Uma solução *end-to-end* projetada para apoiar consultas de ginecologia ou obstetrícia a partir do áudio capturado na relação médico-paciente.
-* **Processamento Digital de Sinais (DSP):** Extração local de biomarcadores acústicos (tom de voz e taxas de hesitação) sem dependência de nuvem, preservando a latência e a privacidade de dados sensíveis da paciente.
-* **Transcrição Automatizada (ASR):** Emprego do modelo **OpenAI Whisper** de forma nativa para transcrição de áudio clínico de forma robusta e resistente a ruídos hospitalares de fundo.
-* **Estruturação Cognitiva (LLM):** Integração via sintaxe declarativa **LCEL (LangChain Expression Language)** com Engenharia de Prompt Defensiva para traduzir, contextualizar termos técnicos e gerar automaticamente um prontuário médico estruturado no padrão internacional **SOAP** (Subjetivo, Objetivo, Avaliação e Plano).
+## ATENDIMENTOS CLÍNICOS MAIS RELEVANTES:
 
-## ⚠️ Aviso de Uso Acadêmico e Isenção de Responsabilidade
+### 1. Perguntas de Rastreio sobre Violência e Abuso Familiar (com Respostas Negativas)
 
-> **IMPORTANTE:** Os componentes deste repositório foram desenvolvidos exclusivamente para fins educacionais, científicos e de demonstração de viabilidade tecnológica. 
-> * **Não substituem validações médicas oficiais.**
-> * **Não estão aptos para embasar decisões clínicas em tempo real, realizar diagnósticos ou apoiar triagens hospitalares.**
-> * Toda e qualquer interpretação ou uso derivado deste código deve ficar estritamente sob a supervisão de profissionais de saúde competentes.
+GAS0005.txt: Ao ser questionada pelo médico se há preocupações em relação à segurança na residência, seja por abuso físico ou verbal, a responsável pelo paciente nega qualquer preocupação desse tipo.
+MSK0027.txt: O médico pergunta se há alguma preocupação com violência física ou emocional no ambiente familiar, ao passo que a mãe da paciente responde que não há nada desse tipo.
+MSK0042.txt: O médico investiga se existem preocupações de segurança em casa em relação a violência física ou abuso verbal contra a paciente ou qualquer membro da família; a paciente confirma que ela e o irmão se sentem seguros em casa.
+RES0003.txt: Ao perguntar sobre a convivência familiar e se há "problemas domésticos" (domestic issues), o médico ouve da mãe do paciente que a relação familiar é ótima e o ambiente é acolhedor.
+RES0051: O médico pergunta se há algum tipo de abuso físico ou verbal no lar ("is there any physical or verbal abuse in the home?"), ao que o paciente responde que não. Em seguida, o médico confirma se o paciente se sente seguro em casa ("so you do feel safe in the home?"), e a resposta é positiva ("Yes yes").
+RES0133: Ao investigar o histórico social de uma estudante, o médico pergunta se no ambiente familiar há exposição a qualquer tipo de violência física ou emocional ("in the home, is there any uh like, are you exposed to any violence of any sort, like physical or emotional, either yourself or, or witnessing?"), e a paciente responde não ("No").
+RES0111: O médico questiona o paciente se ele se sente seguro em casa ("do you feel safe at home?"), recebendo a confirmação de que sim ("Yes").
+RES0124: O médico pergunta se as coisas estão bem em casa e se o paciente se sente seguro ("And things are good at home? Do you feel safe?"), ao que o paciente responde que se sente completamente seguro ("Yeah, yeah, I feel completely safe").
+RES0127: O médico realiza a sondagem de segurança no lar ("Do you feel safe at home?"), e o paciente afirma que sim ("Oh yeah"), negando também a ocorrência de bullying ou outros problemas fora de casa.
+RES0145: O médico pergunta se o paciente se sente seguro em casa, e ele confirma que sim.
+RES0149: Durante a investigação de dor torácica, o médico Pergunta se houve algum trauma físico recente (como impacto nas costelas), e o paciente nega qualquer trauma.
+RES0150: O médico questiona a mãe do paciente infantil sobre histórico de abuso físico ou emocional no lar, e ela nega.
+RES0153: Ao ser questionado sobre a segurança em casa, o paciente afirma que se sente seguro e possui uma família muito carinhosa.
+RES0163: O médico Pergunta sobre a segurança no ambiente doméstico e externo, e o paciente confirma que se sente seguro.
+RES0169: O médico investiga a segurança em casa, e o paciente responde afirmativamente, destacando o bom relacionamento familiar.
+RES0183: O médico Pergunta se a criança esteve exposta a qualquer forma de abuso físico, emocional, verbal ou violência doméstica, e o responsável nega.
+RES0190: Pergunta-se sobre violência física ou emocional em casa, e o paciente responde que se sente seguro e que seus pais são acolhedores.
+RES0197: O médico Pergunta se o paciente se sente seguro no ambiente doméstico ou escolar, e ele confirma que se sente seguro.
 
-## 👥 Integrantes do grupo
-Os membros do grupo são compostos pelos seguintes servidores da **Secretaria de Segurança Pública do Distrito Federal (SSP/DF)**:
+#### 2. Menções a Trauma ou Impactos Físicos (Sem Relação com Violência Doméstica)
 
-- Alexandre Natã Vicente (**rm370024**) (ale.n.vicente@gmail.com)
-- Antônio Cláudio Almeida (**rm370052**) (antonioalmeida@gmail.com)
-- Cyd Ferreira Rodrigues (**rm370004**) (cydnelson@gmail.com)
-- David Catherink (**rm369997**) (d.catherinck@gmail.com)
-- Marcelo Macedo Klotz (**rm370010**) (marceloklotz@gmail.com) 
+Termos como "trauma" ou "impacto" surgem em algumas transcrições estritamente dentro do contexto de investigação médica de sintomas físicos ou acidentes:
 
-<picture>
-  <img src="https://img.shields.io/badge/-ebebeb?style=for-the-badge&logoColor=black" width="100%" height="10px" alt="Integrantes do Grupo">
-</picture>
-
-# 🛠️ Detalhamento e Aplicação Prática das Tecnologias
-
-Para garantir o funcionamento integrado e robusto do ecossistema multimodal, cada tecnologia e biblioteca desempenha um papel estratégico bem definido no código:
-
-* **`openai-whisper`**
-  * **Onde é utilizada:** Na camada inicial de processamento e acessibilidade de áudio.
-  * **Aplicação prática:** Atua localmente como o motor de Reconhecimento Automático de Fala (ASR). Ela recebe os arquivos de áudio contendo as gravações das consultas e realiza a decodificação da voz em texto transcrito nativo em português.
-* **`librosa`**
-  * **Onde é utilizada:** Na extração local de biomarcadores acústicos (DSP - Processamento Digital de Sinais).
-  * **Aplicação prática:** Analisa matematicamente o áudio bruto sem dependência de APIs em nuvem. É usada para calcular a frequência fundamental (Pitch) — fornecendo insumos sobre o tom emocional —, detectar zonas de silêncio e metrificar pausas ou taxas de hesitação na fala da paciente.
-* **`langchain` / `langchain-core` / `langchain-openai`**
-  * **Onde é utilizada:** Na orquestração lógica de inteligência generativa.
-  * **Aplicação prática:** Constrói a esteira cognitiva utilizando a sintaxe declarativa **LCEL (LangChain Expression Language)**. Conecta as saídas textuais do Whisper aos modelos LLM, aplicando Engenharia de Prompt Defensiva para assegurar que o texto médico cru seja estruturado estritamente sob as regras e divisões internacionais do prontuário **SOAP**.
-* **`deep-translator`**
-  * **Onde é utilizada:** Na compatibilização e tradução linguística automatizada.
-  * **Aplicação prática:** Utilizada para automatizar a tradução rápida de termos biomédicos específicos durante as etapas intermediárias de processamento, evitando que barreiras linguísticas comprometam a assertividade das instruções fornecidas à inteligência artificial.
-* **`transformers` & `tiktoken`**
-  * **Onde é utilizada:** No monitoramento de fluxos textuais e governança de custos.
-  * **Aplicação prática:** O `tiktoken` faz a contagem preditiva exata e o corte preventivo dos tokens gerados pela transcrição do áudio clínico antes de enviá-los ao LLM, garantindo que o texto não ultrapasse a janela máxima de contexto da API e prevenindo erros de estouro de memória.
-
-* **`numpy` & `pandas`**
-  * **Onde são utilizadas:** Na manipulação matemática, estruturação de dados e geração de métricas.
-  * **Aplicação prática:** O `numpy` manipula de forma veloz matrizes e tensores numéricos (sejam os pixels das imagens no OpenCV ou os arrays de ondas sonoras no Librosa). O `pandas` organiza as tabelas com o histórico das predições, taxas de acerto e logs, gerando as tabelas e dados estatísticos consolidados no relatório técnico.
- 
-# 📊 Dataset Utilizado
-
-**Áudio — Audio Recording Whisper:** [Disponível via Kaggle](https://www.kaggle.com/datasets/najamahmed97/audio-recording-whisper). 
-
-Conjunto de dados composto por diálogos médicos e simulações de consultas clínicas padronizadas pelo formato SOAP.
-
-# 📁 Fluxo (pipeline)
-
-```text
-
-│   ├── Entrada dos dados → análise por Machine Learning → consulta de informações → interpretação utilizando LLM → apresentação dos resultados para um profissional.
-
-```
-
-## 📒 Relatório técnico
-
-O Relatório Técnico, disponível pelo link abaixo, detalha todo o passo-a-passo para a construção dos módulos:
-
-
-<p align="center">
-  <picture><img src="https://github.com/marceloklotz/fiap-quarta-fase/blob/main/assets/relatorio.png" alt="Realatório"></picture>
-</p>
-
-## 📽️ Vídeo explicativo
-
-O vídeo explicativo sobre a metologia, resultados e código-fonte utilizado foi disponbilizado a partir do link abaixo:
-
-<p align="center">
-<picture>
-  <img src="#" width="100%" alt="Integrantes do Grupo">
-</picture>
-</p>
-<p align="center"> Acesso ao vídeo: -------------  </p>
+RES0058: O médico pergunta se o paciente sofreu algum trauma recente na região da boca ou do nariz para investigar uma alteração de olfato ("did you have any trauma to the area..."), o que é negado.
+RES0070: O médico questiona se o paciente bateu a cabeça ("did you hit your head...") ao investigar o início de uma dor de cabeça forte, hipótese que o paciente descarta.
+RES0075: Para investigar uma dor torácica aguda, o médico pergunta se houve trauma no peito ou acidente de carro ("car accident... trauma to the chest"). O paciente esclarece que a dor começou espontaneamente enquanto estava em casa respirando fundo.
+RES0142: Ao diagnosticar uma paciente com mononucleose, o médico orienta evitar esportes de contato ("sports... cause problems if you get hit in the belly") para prevenir a ruptura do baço, sem qualquer relação com agressão.

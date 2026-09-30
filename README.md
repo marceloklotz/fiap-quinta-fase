@@ -42,7 +42,7 @@ Os membros do grupo são compostos pelos seguintes servidores da **Secretaria de
 14. [Ética, privacidade e LGPD](#-ética-privacidade-e-lgpd)
 15. [Repositório e materiais de apoio](#-repositório-e-materiais-de-apoio)
 16. [Relatório Técnico](#-relatório-técnico)
-17. [Vídeo explicativo](#-vídeo-explicativo)
+17. [Vídeo explicativo](#%EF%B8%8F-v%C3%ADdeo-explicativo)
 
 ---
 

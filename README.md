@@ -1,5 +1,8 @@
 # 🛡️🩺 Guardiã AI — Inteligência Artificial para Saúde e Segurança da Mulher
 
+[![FIAP Postech em IA para Devs](https://img.shields.io/badge/FIAP-Postech%20IA%20para%20Devs-blue?style=for-the-badge)](https://www.fiap.com.br/)
+[![Fase 5 - Tech Challenge](https://img.shields.io/badge/Fase_5-Tech_Challenge-purple?style=for-the-badge)](https://github.com/marceloklotz/fiap-quinta-fase/)
+
 > Protótipo de apoio ao atendimento clínico que transforma o **áudio de uma consulta médica** em um **Relatório Médico + Prontuário SOAP** fundamentado nos **PCDTs do Ministério da Saúde**, com **rastreio de violência doméstica** e orientação de encaminhamento imediato.
 
 [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/marceloklotz/fiap-quinta-fase/blob/main/GUARDIA_IA_MULTI_LLM.ipynb)
@@ -10,9 +13,16 @@
 
 > ⚠️ **Aviso:** protótipo acadêmico. **Não é um dispositivo médico** e **não substitui o julgamento clínico**. Todo relatório gerado deve ser revisado por um profissional de saúde.
 
-Desenvolvido no âmbito do **Tech Challenge da Quinta Fase da Pós Tech (8IADT)** da **FIAP – Faculdade de Informática e Administração Paulista**.
+Desenvolvido no âmbito do **Tech Challenge da Quinta Fase da Pós Tech (8IADT)** da **FIAP – Faculdade de Informática e Administração Paulista**, conforme requisitos contidos no PDF disponível no presente repositório. 
 
----
+## 👥 Integrantes do grupo
+Os membros do grupo são compostos pelos seguintes servidores da **Secretaria de Segurança Pública do Distrito Federal (SSP/DF)**:
+
+- Alexandre Natã Vicente (**rm370024**) (ale.n.vicente@gmail.com)
+- Antônio Cláudio Almeida (**rm370052**) (antonioalmeida@gmail.com)
+- Cyd Ferreira Rodrigues (**rm370004**) (cydnelson@gmail.com)
+- David Catherink (**rm369997**) (d.catherinck@gmail.com)
+- Marcelo Macedo Klotz (**rm370010**) (marceloklotz@gmail.com) 
 
 ## 📑 Sumário
 

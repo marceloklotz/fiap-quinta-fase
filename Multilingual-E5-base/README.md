@@ -1,6 +1,10 @@
-# RAG incremental local/offline
+# 👩‍⚕️👨‍💻 Guardiã AI - Inteligência Artificial para Saúde e Segurança da Mulher: RAG
 
-Este script utiliza o modelo Multilingual-E5-base (disponível no Hugging Face) em substituição a outros modelos de embeddings que foram utilizados no projeto (Gemini/OpenAI). O script é executado localmente com SentenceTransformers.
+[![FIAP Postech em IA para Devs](https://img.shields.io/badge/FIAP-Postech%20IA%20para%20Devs-blue?style=for-the-badge)](https://www.fiap.com.br/)
+[![Fase 5 - Tech Challenge](https://img.shields.io/badge/Fase_5-Tech_Challenge-purple?style=for-the-badge)](https://github.com/marceloklotz/fiap-quinta-fase/)
+[![RAG](https://img.shields.io/badge/RAG-green?style=for-the-badge)](#)
+
+Esta pasta contem o script utilizado em ambiente diverso do notebook principal, com SentenceTransformers, utilizando o modelo Multilingual-E5-base (disponível no Hugging Face). O script é responsável por "traduzir" os arquivos dos protocolos médicos markdown para a LLM. Após a execução, os arquivos são salvos localmente em uma pasta sincronizada com o Google Drive, que é carregada pelo notebook principal.
 
 ## Aprimoramentos realizados
 

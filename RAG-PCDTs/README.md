@@ -1,12 +1,10 @@
-# 👩‍⚕️👨‍💻 Guardiã AI - Inteligência Artificial para Saúde e Segurança da Mulher: RAG (
+# 👩‍⚕️👨‍💻 Guardiã AI - Inteligência Artificial para Saúde e Segurança da Mulher: RAG (Crawler e Conversor)
 
 [![FIAP Postech em IA para Devs](https://img.shields.io/badge/FIAP-Postech%20IA%20para%20Devs-blue?style=for-the-badge)](https://www.fiap.com.br/)
 [![Fase 5 - Tech Challenge](https://img.shields.io/badge/Fase_5-Tech_Challenge-purple?style=for-the-badge)](https://github.com/marceloklotz/fiap-quinta-fase/)
 [![RAG](https://img.shields.io/badge/RAG-green?style=for-the-badge)](#)
 
-Esta pasta contem o script que extrai todos os Protocolos Clínicos e Diretrizes Terapêuticas (PCDTs) contidos no portal do Ministério da Saúde (https://www.gov.br/saude/pt-br/assuntos/pcdt) foi **disponibilizado em notebook separado** no repositório desse projeto e pode ser baixado pelo seguinte endereço: https://github.com/marceloklotz/fiap-quinta-fase/blob/main/PCDTs.ipynb
-
-O código realiza a compactação dos protocolos disponibilizados originalmente em PDF, exporta para ZIP, além de converter, enriquecer e transformar em arquivos tipo *markdown*. O notebook contém a implementação completa do RAG com a extração, carregamento dos documentos, possibilitando a recuperação dos trechos relevantes e a inserção desses trechos neste notebook.
+Esta pasta contem o script que extrai todos os Protocolos Clínicos e Diretrizes Terapêuticas (PCDTs) contidos no portal do Ministério da Saúde (https://www.gov.br/saude/pt-br/assuntos/pcdt). O código realiza a compactação dos protocolos disponibilizados originalmente em PDF, exporta para ZIP, além de converter, enriquecer e transformar em arquivos em *markdown*. O notebook contém a implementação completa do RAG com a extração, carregamento dos documentos, possibilitando a recuperação dos trechos relevantes e a inserção desses trechos neste notebook.
 
 Resumo do fluxo para etapas utilizadas no PCDTs.ipynb:
 
@@ -16,7 +14,7 @@ Resumo do fluxo para etapas utilizadas no PCDTs.ipynb:
 *   🔄 Conversão, Enriquecimento e Fragmentação (Célula de Código)
 *   💾 Download dos Markdowns processados
 
-O arquivo ZIP contendo os arquivos markdown dos "PCDTs" foi disponibilizado no seguinte link: https://github.com/marceloklotz/fiap-quinta-fase/blob/main/PCDTs_Markdown.zip
+O arquivo ZIP contendo os arquivos dos PCDTs extraídos e já convertidos em markdown foi disponibilizado nesta pasta (PCDTs_Markdown.zip).
 
 => Além disso, foi disponibilizado o script (https://github.com/marceloklotz/fiap-quinta-fase/tree/main/Multilingual-E5-base) utilizado para executar localmente com SentenceTransformers para executar o FAISS (Facebook AI Similarity Search):
 

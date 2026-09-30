@@ -2,7 +2,7 @@
 
 [![FIAP Postech em IA para Devs](https://img.shields.io/badge/FIAP-Postech%20IA%20para%20Devs-blue?style=for-the-badge)](https://www.fiap.com.br/)
 [![Fase 5 - Tech Challenge](https://img.shields.io/badge/Fase_5-Tech_Challenge-purple?style=for-the-badge)](https://github.com/marceloklotz/fiap-quinta-fase/)
-[![RAG](https://img.shields.io/badge/RAG-green?style=for-the-badge)](#)
+[![RAG](https://img.shields.io/badge/RAG_CRAWLER_CONVERSOR-green?style=for-the-badge)](#)
 
 Esta pasta contem o script que extrai todos os Protocolos Clínicos e Diretrizes Terapêuticas (PCDTs) contidos no portal do Ministério da Saúde (https://www.gov.br/saude/pt-br/assuntos/pcdt). O código realiza a compactação dos protocolos disponibilizados originalmente em PDF, exporta para ZIP, além de converter, enriquecer e transformar em arquivos em *markdown*. O notebook contém a implementação completa do RAG com a extração, carregamento dos documentos, possibilitando a recuperação dos trechos relevantes e a inserção desses trechos neste notebook.
 

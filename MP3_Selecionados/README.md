@@ -2,6 +2,7 @@
 
 [![FIAP Postech em IA para Devs](https://img.shields.io/badge/FIAP-Postech%20IA%20para%20Devs-blue?style=for-the-badge)](https://www.fiap.com.br/)
 [![Fase 5 - Tech Challenge](https://img.shields.io/badge/Fase_5-Tech_Challenge-purple?style=for-the-badge)](https://github.com/marceloklotz/fiap-quinta-fase/)
+[![MP3 Selecionados](https://img.shields.io/badge/MP3_Selecionados-green?style=for-the-badge)](#)
 
 Esta pasta contém arquivos MP3 selecionados que podem ser utilizados para testar o uso do "GUARDIÃ AI - Inteligência Artificial para Saúde e Segurança da Mulher". Os arquivos foram extraídos a partir do [Kaggle](https://www.kaggle.com/datasets/najamahmed97/audio-recording-whisper/data.), onde podem ser encontradas as transcrições completas. O repositório encontra-se na língua inglesa. Abaixo trechos das transcrições traduzidas (contexto). Os arquivos foram selecionadas por estarem relacionados à questionamentos sobre possível ocorrência de violência doméstica durante o atendimento clínico médico.
 

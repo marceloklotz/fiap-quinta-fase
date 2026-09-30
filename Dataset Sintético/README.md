@@ -6,7 +6,7 @@
 
 ## 🧬 Dataset Sintético de Triagem (Guardiã AI)
 
-Essa pasta contém um **exemplo** de dataset gerado pelo Notebook principal, que é armazenado em cache após sua execução. O motor gera uma base de dados sintética com **5.000 registros** simulando o atendimento e triagem de pacientes. O objetivo é fornecer dados estruturados para testes de algoritmos de machine learning e análise preditiva.
+Essa pasta contém um **exemplo** de dataset sintético gerado pelo Notebook principal, que é armazenado em cache após sua execução. O motor gera uma base de dados sintética com **5.000 registros** simulando o atendimento e triagem de pacientes. O objetivo é fornecer dados estruturados para testes de algoritmos de machine learning e análise preditiva.
 
 ### ⚙️ Principais Funcionalidades e Premissas do Gerador:
 * **Dados Demográficos e Identificação:** Utiliza a biblioteca `Faker` (configurada para o Brasil `pt_BR`) para gerar nomes limpos (sem títulos ou abreviaturas), datas de nascimento, CPFs e RGs.

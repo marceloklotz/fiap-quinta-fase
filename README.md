@@ -356,7 +356,7 @@ Distribuição do dataset sintético: 2.602 registros femininos e 2.398 masculin
 O Relatório Técnico, disponível pelo link abaixo, detalha todo o passo-a-passo para a construção dos módulos:
 
 <p align="center">
-  <picture><img src="https://github.com/marceloklotz/fiap-quarta-fase/blob/main/assets/relatorio.png" alt="Realatório"></picture>
+  <picture><img src="https://github.com/marceloklotz/fiap-quinta-fase/blob/main/assets/relatorio.png" alt="Realatório"></picture>
 </p>
 
 ## 📽️ Vídeo explicativo

@@ -119,26 +119,41 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    A["🎙️ Áudio da consulta (MP3)"] --> B["1. Transcrição<br/>Whisper large (local)"]
-    B --> C["Transcrição em inglês"]
-    C --> D["4. Preparo com LLM (1 chamada)<br/>• traduz para PT-BR<br/>• consulta clínica para busca<br/>• triagem de violência"]
-    C --> V["Varredura por termos-gatilho<br/>(regex PT/EN, independe do LLM)"]
-    D --> E["5. Recuperação no FAISS<br/>multiconsulta + MMR + deduplicação"]
-    P[("📁 Índice FAISS dos PCDTs<br/>Google Drive")] --> E
-    E --> F["6. LLM gera Relatório + SOAP<br/>(PT-BR)"]
-    D --> F
-    V --> F
-    F --> G["7. Verificação de segurança<br/>garante encaminhamento se houver indícios"]
-    G --> H["📄 Relatório final<br/>exibido e salvo em .md"]
+    %% ENTRADA DE DADOS E PROCESSAMENTO LOCAL
+    A["🎙️ Áudio da Consulta (MP3)"] --> B["✍️ 1. Transcrição (Whisper large - Inglês)"]
+    A --> C["🗣️ Análise Vocal (Librosa: Hesitação/Pitch)"]
+    
+    %% MACHINE LEARNING
+    C --> D["📊 2. Triagem de Risco Clínico (XGBoost + SHAP)"]
+    DadosS["Dados Demográficos (Dataset Sintético)"] --> D
 
-    subgraph LLM["🔀 Camada LLM multi-provedor"]
-    direction LR
-    L1["Gemini (principal)"] -. "cota esgotada / 404 / falha" .-> L2["OpenAI (subsidiário)"]
+    %% PREPARAÇÃO E RAG
+    B --> E["🤖 4. Preparação com LLM (Tradução e Consulta)"]
+    B --> V["🔍 Varredura de Termos-Gatilho (Regex - Independente)"]
+
+    P[("📁 Índice FAISS (PCDTs)")] --> R["🔎 5. Recuperação Vetorial RAG (MMR)"]
+    E --> R
+
+    %% CRUZAMENTO E GERAÇÃO
+    B -.-> G["📄 6. Geração do Prontuário SOAP (PT-BR)"]
+    C -.-> G
+    D -.-> G
+    R --> G
+    E --> G
+
+    %% SEGURANÇA E SAÍDA FINAL
+    G --> S["🚨 7. Verificação e Rede de Segurança"]
+    V --> S
+    S --> F["✅ Relatório Final (salvo em .md)"]
+
+    %% CAMADA LLM
+    subgraph Camada_LLM ["🔀 Orquestração Multi-Provedor (LLM)"]
+        direction LR
+        L1("Gemini (Principal)") -.->|Cota Esgotada / Falha| L2("OpenAI (Subsidiário)")
     end
-    D -.-> LLM
-    F -.-> LLM
 
-    S["📊 Dataset sintético → XGBoost → SHAP"] -. "módulo de triagem de risco" .- F
+    E -.-> Camada_LLM
+    G -.-> Camada_LLM
 ```
 
 **Ideias de arquitetura que valem destacar**

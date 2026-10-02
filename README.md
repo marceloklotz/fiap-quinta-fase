@@ -156,6 +156,63 @@ flowchart TD
     G -.-> Camada_LLM
 ```
 
+
+
+```mermaid
+flowchart TD
+    %% ENTRADA DE DADOS
+    A["🎙️ Áudio da Consulta (MP3)"]
+
+    %% PROCESSAMENTO LOCAL (ÁUDIO E PREDITIVO)
+    A --> B["✍️ 1. Motor de Transcrição<br/>(Whisper large - Inglês)"]
+    A --> C["🗣️ Motor de Análise Vocal<br/>(Librosa: Hesitação e Pitch)"]
+    
+    C --> D["📊 2. Triagem de Risco Clínico<br/>(XGBoost + Explicabilidade SHAP)"]
+    DadosS["Dados Demográficos<br/>(Dataset Sintético)"] --> D
+
+    %% PREPARAÇÃO E RAG
+    B --> E["🤖 4. Preparação e Tradução (LLM)<br/>• Tradução PT-BR<br/>• Extração de Consulta Clínica<br/>• Triagem de Violência (Semântica)"]
+    B --> V["🔍 Varredura de Termos-Gatilho<br/>(Regex - Independente do LLM)"]
+
+    P[("📁 Índice FAISS (PCDTs)<br/>(Google Drive / Offline)")] --> R
+    E --> R["🔎 5. Recuperação Vetorial (RAG)<br/>(Multiconsulta + MMR + Deduplicação)"]
+
+    %% GERAÇÃO GENERATIVA (CRUZAMENTO DE DADOS)
+    B -.-> G
+    C -.-> G
+    D -.-> G
+    R --> G["📄 6. Geração do Prontuário SOAP<br/>(Cruza Dados, Transcrição, Áudio e PCDT)"]
+    E --> G
+
+    %% REDE DE SEGURANÇA E SAÍDA FINAL
+    G --> S["🚨 7. Rede de Segurança<br/>(Injeta orientação e encaminhamento obrigatório)"]
+    V --> S
+    S --> F["✅ Relatório Final<br/>(Exibido e salvo em .md)"]
+
+    %% ORQUESTRAÇÃO MULTI-PROVEDOR
+    subgraph Camada_LLM ["🔀 Orquestração Multi-Provedor (LLM)"]
+        direction LR
+        L1("Gemini<br/>(Provedor Principal)") -. "Falha / Cota Esgotada" .-> L2("OpenAI<br/>(Provedor Subsidiário)")
+    end
+
+    E -.-> Camada_LLM
+    G -.-> Camada_LLM
+
+    %% ESTILIZAÇÃO VISUAL
+    classDef input fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
+    classDef local fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px;
+    classDef llm fill:#e3f2fd,stroke:#1565c0,stroke-width:2px;
+    classDef rag fill:#fff3e0,stroke:#e65100,stroke-width:2px;
+    classDef security fill:#ffebee,stroke:#c62828,stroke-width:2px;
+    
+    class A,DadosS input;
+    class B,C,D local;
+    class E,G,Camada_LLM llm;
+    class P,R rag;
+    class V,S security;
+```
+    
+
 **Ideias de arquitetura que valem destacar**
 
 - **Transcrição em inglês, local:** o áudio de exemplo é em inglês e o Whisper roda no próprio ambiente, preservando a privacidade do áudio e evitando gastar cota de LLM com tradução de fala.

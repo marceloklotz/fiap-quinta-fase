@@ -8,6 +8,10 @@
 
 Essa pasta contém um **exemplo** de dataset sintético gerado pelo Notebook principal, que é armazenado em cache após sua execução. O motor gera uma base de dados sintética com **5.000 registros** simulando o atendimento e triagem de pacientes. O objetivo é fornecer dados estruturados para testes de algoritmos de machine learning e análise preditiva.
 
+<p align="center">
+  <picture><img src="https://github.com/marceloklotz/fiap-quinta-fase/blob/main/assets/Guardiã_AI__Triagem_Preditiva.png" alt="Guardiã_AI__Triagem_Preditiva"></picture>
+</p>
+
 ### ⚙️ Principais Funcionalidades e Premissas do Gerador:
 * **Dados Demográficos e Identificação:** Utiliza a biblioteca `Faker` (configurada para o Brasil `pt_BR`) para gerar nomes limpos (sem títulos ou abreviaturas), datas de nascimento, CPFs e RGs.
 * **Sinais Vitais Realistas:** Simula distribuições estatísticas (via distribuições normais acopladas a limites clínicos com `np.clip`) para pressão arterial, frequência cardíaca e respiratória, temperatura, saturação de oxigênio ($\text{SpO}_2$) e histórico de comorbidades.

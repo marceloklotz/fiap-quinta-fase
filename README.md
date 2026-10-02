@@ -163,8 +163,6 @@ flowchart TD
 
 
 
-
-
 **Ideias de arquitetura que valem destacar**
 
 - **Transcrição em inglês, local:** o áudio de exemplo é em inglês e o Whisper roda no próprio ambiente, preservando a privacidade do áudio e evitando gastar cota de LLM com tradução de fala.

@@ -117,7 +117,7 @@ flowchart TD
 
 ------------------
 
-
+```mermaid
 flowchart TD
     A["🎙️ Áudio da consulta (MP3)"] --> B["1. Transcrição<br/>Whisper large (local)"]
     B --> C["Transcrição em inglês"]
@@ -139,7 +139,7 @@ flowchart TD
     F -.-> LLM
 
     S["📊 Dataset sintético → XGBoost → SHAP"] -. "módulo de triagem de risco" .- F
-
+```
 
 **Ideias de arquitetura que valem destacar**
 

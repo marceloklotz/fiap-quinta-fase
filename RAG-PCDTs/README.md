@@ -6,6 +6,10 @@
 
 Esta pasta contem o script que extrai todos os Protocolos Clínicos e Diretrizes Terapêuticas (PCDTs) contidos no portal do Ministério da Saúde (https://www.gov.br/saude/pt-br/assuntos/pcdt). O código realiza a compactação dos protocolos disponibilizados originalmente em PDF, exporta para ZIP, além de converter, enriquecer e transformar em arquivos em *markdown*. O notebook contém a implementação completa do RAG com a extração, carregamento dos documentos, possibilitando a recuperação dos trechos relevantes e a inserção desses trechos neste notebook.
 
+<p align="center">
+  <picture><img src="https://github.com/marceloklotz/fiap-quinta-fase/blob/main/assets/Guardiã_AI_Arquitetura_Inteligente_para_Apoio_Clínico_-_Slide_6png" alt="Guardiã_AI_Arquitetura_Inteligente_para_Apoio_Clínico_-_Slide_6"></picture>
+</p>
+
 Resumo do fluxo para etapas utilizadas no PCDTs.ipynb:
 
 *   📥 Crawler e Downloader

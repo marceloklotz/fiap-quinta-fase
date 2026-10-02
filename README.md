@@ -79,6 +79,10 @@ O **Guardiã AI** recebe o áudio (MP3) de uma consulta médica simulada e execu
 
 ---
 
+<p align="center">
+  <picture><img src="https://github.com/marceloklotz/fiap-quinta-fase/blob/main/assets/Fluxo_do_Guardiã_AI.png" alt="Fluxo_do_Guardiã_AI"></picture>
+</p>
+
 ## 🧭 Arquitetura e fluxo
 
 ```mermaid
@@ -104,10 +108,6 @@ flowchart TD
 
     S["📊 Dataset sintético → XGBoost → SHAP"] -. "módulo de triagem de risco" .- F
 ```
-
-<p align="center">
-  <picture><img src="https://github.com/marceloklotz/fiap-quinta-fase/blob/main/assets/Fluxo_do_Guardiã_AI.png" alt="Fluxo_do_Guardiã_AI"></picture>
-</p>
     
 **Ideias de arquitetura que valem destacar**
 

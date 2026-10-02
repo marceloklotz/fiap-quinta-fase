@@ -6,6 +6,10 @@
 
 Esta pasta contem o script utilizado em ambiente diverso do notebook principal, com SentenceTransformers, utilizando o modelo Multilingual-E5-base (disponível no Hugging Face). O script é responsável por "traduzir" os arquivos dos protocolos médicos markdown para a LLM. Após a execução, os arquivos são salvos localmente em uma pasta sincronizada com o Google Drive, que é carregada pelo notebook principal.
 
+<p align="center">
+  <picture><img src="https://github.com/marceloklotz/fiap-quinta-fase/blob/main/assets/Diagrama_de_RAG_Incremental_Multilíngue.png" alt="Diagrama_de_RAG_Incremental_Multilíngue"></picture>
+</p>
+
 ## Aprimoramentos realizados
 
 - FAISS

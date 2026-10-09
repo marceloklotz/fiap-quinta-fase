@@ -366,10 +366,4 @@ O Relatório Técnico, disponível pelo link abaixo, detalha todo o passo-a-pass
 ## 📽️ Vídeo explicativo
 
 O vídeo explicativo sobre a metologia, resultados e código-fonte utilizado foi disponbilizado a partir do link abaixo:
-
-<p align="center">
-<picture>
-  <img src="#" width="100%" alt="Integrantes do Grupo">
-</picture>
-</p>
-<p align="center"> Acesso ao vídeo: [[-------------](https://youtu.be/LNJrmBWLfJo)](https://youtu.be/LNJrmBWLfJo)  </p>
+(https://youtu.be/LNJrmBWLfJo)](https://youtu.be/LNJrmBWLfJo)
